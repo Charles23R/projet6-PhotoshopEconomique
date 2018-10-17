@@ -13,6 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 
@@ -62,6 +63,16 @@ public class Main extends Application {
         Slider contrasteSlide = new Slider(-1, 1, 0);
         Slider teinteSlide = new Slider(-1, 1, 0);
         Slider saturationSlide = new Slider(-1, 1, 0);
+
+        Tooltip tooltip1= new Tooltip("Rend l'image plus claire ou plus sombre");
+        Tooltip tooltip2= new Tooltip("Diminue ou augmente la différence entre les couleurs");
+        Tooltip tooltip3= new Tooltip("Change la teinte (couleur) de l'image");
+        Tooltip tooltip4= new Tooltip("Diminue ou augmente l'intensité des couleurs");
+
+        lumiSlide.setTooltip(tooltip1);
+        contrasteSlide.setTooltip(tooltip2);
+        teinteSlide.setTooltip(tooltip3);
+        saturationSlide.setTooltip(tooltip4);
 
         ImageView imageView = new ImageView("file:default.jpg");
         imageView.setPreserveRatio(true);
